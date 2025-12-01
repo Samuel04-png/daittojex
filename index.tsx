@@ -37,7 +37,7 @@ const Navigation = ({ activePage, setPage, isScrolled, mobileMenuOpen, setMobile
             {/* Logo with white background for visibility on dark backgrounds */}
             <div className="absolute inset-0 bg-white rounded-xl shadow-xl opacity-95 group-hover:opacity-100 transition-opacity border-2 border-white/50"></div>
             <img 
-              src="/logos/logo.png" 
+              src={`${import.meta.env.BASE_URL}logos/logo.png`}
               alt="DAITTOJEX Logo" 
               className="relative z-10 w-full h-full object-contain p-2 rounded-xl"
               onError={(e) => {
@@ -133,7 +133,7 @@ const Footer = ({ setPage }) => (
             <div className="relative w-14 h-14 flex items-center justify-center">
               <div className="absolute inset-0 bg-white rounded-xl opacity-95 border-2 border-white/50"></div>
               <img 
-                src="/logos/logo.png" 
+                src={`${import.meta.env.BASE_URL}logos/logo.png`}
                 alt="DAITTOJEX Logo" 
                 className="relative z-10 w-full h-full object-contain p-2 rounded-xl"
                 onError={(e) => {
@@ -1966,12 +1966,12 @@ const CertificateDetailPage = ({ certIndex, setPage = (page: string) => {} }: { 
         {/* Certificate Image */}
         <div className="mb-12 bg-white p-8 rounded-2xl shadow-xl">
           <img 
-            src={`/company-certificates/${cert.file}`}
+            src={`${import.meta.env.BASE_URL}company-certificates/${cert.file}`}
             alt={cert.name}
             className="w-full h-auto rounded-lg shadow-lg"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
-              target.src = '/company-certificates/placeholder.png';
+              target.src = `${import.meta.env.BASE_URL}company-certificates/placeholder.png`;
             }}
           />
         </div>
@@ -2012,7 +2012,7 @@ const CertificateDetailPage = ({ certIndex, setPage = (page: string) => {} }: { 
           <button
             onClick={async () => {
               try {
-                const imageUrl = `/company-certificates/${cert.file}`;
+                const imageUrl = `${import.meta.env.BASE_URL}company-certificates/${cert.file}`;
                 const response = await fetch(imageUrl);
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
@@ -2026,7 +2026,7 @@ const CertificateDetailPage = ({ certIndex, setPage = (page: string) => {} }: { 
               } catch (error) {
                 console.error('Download failed:', error);
                 // Fallback: open in new tab
-                window.open(`/company-certificates/${cert.file}`, '_blank');
+                window.open(`${import.meta.env.BASE_URL}company-certificates/${cert.file}`, '_blank');
               }
             }}
             className="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-navy-900 font-bold rounded-xl hover:bg-gold-600 transition-colors shadow-lg cursor-pointer"
