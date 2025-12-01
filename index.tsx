@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
+// CSS is loaded via <link> tag in index.html to avoid MIME type errors
 import { 
   Menu, X, ChevronRight, Phone, Mail, MapPin, 
   ArrowRight, CheckCircle, Download, Users, 
