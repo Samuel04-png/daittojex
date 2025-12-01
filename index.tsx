@@ -2009,14 +2009,31 @@ const CertificateDetailPage = ({ certIndex, setPage = (page: string) => {} }: { 
         {/* Download Section */}
         <div className="bg-white p-8 rounded-2xl shadow-lg text-center">
           <h3 className="text-xl font-heading font-bold text-navy-900 mb-4">Download Certificate</h3>
-          <a
-            href={`/company-certificates/${cert.file}`}
-            download
-            className="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-navy-900 font-bold rounded-xl hover:bg-gold-600 transition-colors shadow-lg"
+          <button
+            onClick={async () => {
+              try {
+                const imageUrl = `/company-certificates/${cert.file}`;
+                const response = await fetch(imageUrl);
+                const blob = await response.blob();
+                const url = window.URL.createObjectURL(blob);
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = cert.file;
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                window.URL.revokeObjectURL(url);
+              } catch (error) {
+                console.error('Download failed:', error);
+                // Fallback: open in new tab
+                window.open(`/company-certificates/${cert.file}`, '_blank');
+              }
+            }}
+            className="inline-flex items-center gap-2 px-8 py-4 bg-gold-500 text-navy-900 font-bold rounded-xl hover:bg-gold-600 transition-colors shadow-lg cursor-pointer"
           >
             <Download size={20} />
             Download {cert.name}
-          </a>
+          </button>
         </div>
       </div>
     </div>
