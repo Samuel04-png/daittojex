@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DAITTOJEX Contractors Co. Limited - Leading multi-sector contractor in Zambia. Construction, Civil Engineering, Logistics, Supply Chain, Agriculture, and more. Excellence since 2015." />
+    <meta name="keywords" content="construction, civil engineering, logistics, supply chain, Zambia, contractor, infrastructure, mining supply, transport" />
+    <meta name="author" content="DAITTOJEX Contractors Co. Limited" />
+    <meta property="og:title" content="DAITTOJEX Contractors Co. Limited | Excellence in Construction & Supply" />
+    <meta property="og:description" content="Leading multi-sector contractor delivering world-class solutions across Zambia since 2015." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0A0F2C" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/daittojex/assets/logo-D4sHWXdj.png" />
+    <link rel="apple-touch-icon" href="/daittojex/assets/logo-D4sHWXdj.png" />
+    
+    <title>DAITTOJEX CONTRACTORS CO. LIMITED | Excellence in Construction & Supply</title>
+    
+    <!-- Premium Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                900: '#0A0F2C',
+                800: '#11183d',
+                700: '#1a2349',
+              },
+              gold: {
+                300: '#F4E8C1',
+                400: '#E5C975',
+                500: '#C9A349',
+                600: '#A88632',
+                700: '#8B6F1F',
+              },
+              steel: '#E5E7EB',
+              royal: '#335CFF',
+              emerald: '#10B981',
+            },
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              heading: ['Montserrat', 'sans-serif'],
+              alt: ['Poppins', 'sans-serif'],
+              stats: ['Roboto Condensed', 'sans-serif'],
+            },
+            backgroundImage: {
+              'hero-pattern': "linear-gradient(to right bottom, rgba(10, 15, 44, 0.95), rgba(10, 15, 44, 0.85)), url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=2070&auto=format&fit=crop')",
+              'gold-gradient': 'linear-gradient(135deg, #C9A349 0%, #E5C975 50%, #C9A349 100%)',
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            },
+            boxShadow: {
+              'glow': '0 0 20px rgba(201, 163, 73, 0.4)',
+              'glow-lg': '0 0 40px rgba(201, 163, 73, 0.6)',
+              'gold': '0 10px 40px -10px rgba(201, 163, 73, 0.4)',
+              'gold-lg': '0 20px 60px -15px rgba(201, 163, 73, 0.5)',
+            },
+            animation: {
+              'gradient-shift': 'gradient-shift 3s ease infinite',
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 3s ease-in-out infinite',
+            },
+            keyframes: {
+              'gradient-shift': {
+                '0%, 100%': { 'background-position': '0% 50%' },
+                '50%': { 'background-position': '100% 50%' },
+              },
+              'float': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Animations */
+      @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-up {
+        animation: fadeUp 0.8s ease-out forwards;
+      }
+      .delay-100 { animation-delay: 0.1s; }
+      .delay-200 { animation-delay: 0.2s; }
+      .delay-300 { animation-delay: 0.3s; }
+      
+      .hover-lift {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .hover-lift:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* Scrollbar */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #0A0F2C;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #C9A349;
+        border-radius: 5px;
+      }
+    </style>
+
+<!-- CSS will be imported via index.tsx, but also linked here as fallback -->
+<link rel="stylesheet" href="/daittojex/index.css">
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+  </script>
+  <script type="module" crossorigin src="/daittojex/assets/index-JCK1Div5.js"></script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
